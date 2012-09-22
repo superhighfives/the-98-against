@@ -1,0 +1,55 @@
+
+@import 'symbolset'
+
+body
+  font: 100% Helvetica, Arial, sans-serif
+  color: $color-text
+
+h1, h2, h3, h4, h5, h6
+  font-family: 'Source Sans Pro', sans-serif
+  font-weight: 200
+  text-transform: uppercase
+  color: $color-highlight
+
+h1
+  font-size: 2.250em
+  text-align: center
+
+h2
+  font-weight: 400
+  padding: 12px 0 24px
+  min-height: 40px
+
+p
+  font-size: 0.750em
+  line-height: 2em
+
+a
+  color: $color-highlight
+  font-weight: bold
+  text-decoration: none
+  border-bottom: 1px dotted $color-highlight
+  &:hover, &:visited
+    color: $color-highlight
+    border-bottom: 1px solid $color-highlight
+
+strong
+  color: $color-highlight
+
+dl
+  padding-bottom: 24px
+  dt
+    text-transform: uppercase
+    font-size: 0.625em
+    padding-bottom: 4px
+  dd
+    margin: 0
+    font-size: 0.75em
+    padding-bottom: 10px
+    &:last-child
+      padding-bottom: 0
+
+ul
+  margin: 0
+  padding: 0
+

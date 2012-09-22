@@ -1,0 +1,37 @@
+
+.wrapper
+  width: $grid-width
+  margin: 0 auto
+
+.thin
+  width: $grid-content-width
+  margin: 0 auto
+
+.centered
+  text-align: center
+
+hr
+  width: $grid-divider-width
+  border: none
+  background: $color-break
+  height: 1px
+  margin: $grid-gutter-width * 2 auto
+
+.grid
+  width: $grid-width
+
+  .item
+    float: left
+    width: $grid-column-width
+    margin-right: $grid-gutter-width
+    margin-bottom: $grid-gutter-width * 2
+
+    &:nth-child(6n+6)
+      margin-right: 0
+
+    &:nth-child(6n+7)
+      clear: both
+
+.footer
+  clear: both
+  padding-bottom: $grid-gutter-width * 2

@@ -1,0 +1,67 @@
+
+$color-highlight            : #c9151a
+$color-text                 : #444
+$color-aside                : #666
+$color-break                : #e5e5e5
+$color-shadow               : #000
+$color-border               : #fff
+
+$grid-columns               : 6
+$grid-column-width          : 140px
+$grid-gutter-width          : 24px
+$grid-width                 : ($grid-columns * $grid-column-width) + (($grid-columns - 1) * $grid-gutter-width)
+$grid-content-width         : (($grid-columns - 2) * $grid-column-width) + (($grid-columns - 3) * $grid-gutter-width)
+$grid-divider-width         : (($grid-columns - 4) * $grid-column-width) + (($grid-columns - 5) * $grid-gutter-width)
+
+@import 'mixins'
+@import 'normalize'
+@import 'typography'
+@import 'layout'
+
+h1
+  padding: 38px 0
+
+  .circle
+    padding: 5px 10px
+    border: 1px solid $color-highlight
+    +border-radius(30px)
+
+.grid
+  .item
+    .frame
+      +box-shadow(0 0 10px 0 rgba($color-shadow, 0.1))
+      width: 130px
+      height: 130px
+      padding: 4px
+      overflow: hidden
+      border: 1px solid $color-break
+      position: relative
+      .ribbon
+        position: absolute
+        top: 5px
+        right: -17px
+        display: inline-block
+        text-align: center
+        text-transform: uppercase
+        background: #d93131
+        padding: 2px 20px 1px
+        +rotate(45deg)
+        +box-shadow(0 0 10px 0, rgba($color-shadow, 0.2))
+        border: 1px solid $color-border
+        font-size: 0.625em
+        color: $color-border
+      img
+        width: 130px
+        height: 130px
+
+
+    ul
+      li
+        font-size: 0.75em
+        padding: 5px 0
+        clear: both
+        .ss-icon
+          float: left
+          padding-right: 5px
+          margin-right: 5px
+          border-right: 1px solid $color-break

@@ -1,0 +1,39 @@
+!!!  
+%html  
+  %head  
+    %title The 98 Against
+    %meta{:name => "description", :content => ""}
+    %meta{:name => "author", :content => "Charlie Gleason"}
+    %meta{:name => "viewport", :content => "width=device-width,initial-scale=1,maximum-scale=1.0"}
+    %link{:href => "/favicon.ico", :rel => "shortcut icon"}
+    %link{:href => "/apple-touch-icon.png", :rel => "apple-touch-icon"}
+
+    %link{:href => "http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "/stylesheets/the98against.css", :rel => "stylesheet", :type => "text/css"}
+
+    %script{:src => "//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"}
+  %body  
+    .header
+      .wrapper
+        %h1
+          The
+          %span.circle 98
+          Against
+        .thin.centered
+          :markdown
+            On Wednesday September 19th, 2012, **98 Australian parlimentary members** in the lower house voted against marriage equality. This list serves as a reminder of those who stand for prejudice and inequality. Let your voice be heard. Explain why marriage equality is so important. Tell them Australia does not support **the 98 against**.
+      %hr
+    
+    .content
+      .wrapper
+        =yield
+
+    .footer
+      %hr
+      .wrapper
+        .thin.centered
+          :markdown
+            Made by [Charlie Gleason](http://charliegleason.com/ "Charlie Gleason"), who is feeling pretty frustrated • Typeset in [Source Sans Pro](http://blogs.adobe.com/typblography/2012/08/source-sans-pro.html "Adobe's open source Source Sans Pro") and Helvetica
+
+    %script{:src => "http://s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"}
+    %script{:src => "//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"}

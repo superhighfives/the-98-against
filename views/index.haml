@@ -1,0 +1,41 @@
+.grid
+  - @politicians.each do |politician|
+    .item
+      .frame
+        %span.ribbon No
+        %img{src: "/images/the98/#{politician.pid}.jpg", width: "130"}
+      %h2= politician.title
+      %dl
+        - if !politician.position.nil?
+          %dt Position
+          %dd= politician.position
+        - if !politician.electorate.nil?
+          %dt Electorate
+          %dd= politician.electorate
+        - if !politician.party.nil?
+          %dt Party
+          %dd= politician.party
+      %ul
+        - if !politician.twitter.nil?
+          %li
+            %a{href: "#{politician.twitter}"}
+              .ss-icon.ss-social twitter
+              Twitter
+        - if !politician.facebook.nil?
+          %li
+            %a{href: "#{politician.facebook}"}
+              .ss-icon.ss-social facebook
+              Facebook
+        - if !politician.email.nil?
+          %li
+            %a{href: "mailto:#{politician.email}"}
+              .ss-icon.ss-social email
+              Email
+        %li
+          %a{href: "tel:#{politician.phone}"}
+            .ss-icon.ss-standard phone
+            #{politician.phone}
+        %li
+          %a{href: "#{politician.aph}"}
+            .ss-icon.ss-standard computer
+            View their profile
