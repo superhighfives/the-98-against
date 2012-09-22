@@ -6,6 +6,7 @@ require './db/models'
 require 'haml'
 require 'sass'
 require 'maruku'
+require 'uri'
 
 db = URI.parse(ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
 
