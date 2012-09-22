@@ -1,10 +1,13 @@
 source 'https://rubygems.org'
 
-group :development do
-  gem 'sqlite3', '1.3.5'
+group :development, :test do
+  gem 'sqlite3'
 end
 
-gem 'pg'
+group :production do
+  gem 'pg' # this gem is required to use postgres on Heroku
+end
+
 gem 'compass'
 gem 'sinatra'
 gem 'sinatra-activerecord'
