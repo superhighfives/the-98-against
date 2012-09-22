@@ -5,7 +5,6 @@ group :development do
 end
 
 gem 'pg'
-gem 'thin'
 gem 'compass'
 gem 'sinatra'
 gem 'sinatra-activerecord'
