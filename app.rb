@@ -9,7 +9,7 @@ require 'maruku'
 require 'uri'
 
 configure :development, :test do
-  set :database, 'sqlite://development.db'
+  set :database, 'sqlite3:///the98against.db'
 end
 
 configure :production do
