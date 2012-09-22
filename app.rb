@@ -7,7 +7,19 @@ require 'haml'
 require 'sass'
 require 'maruku'
 
-set :database, 'sqlite3:///the98against.db'
+db = URI.parse(ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
+
+ActiveRecord::Base.establish_connection(
+  :adapter  => db.scheme == 'postgres' ? 'postgresql' : db.scheme,
+  :host     => db.host,
+  :port     => db.port,
+  :username => db.user,
+  :password => db.password,
+  :database => db.path[1..-1],
+  :encoding => 'utf8'
+)
+
+#set :database, 'sqlite3:///the98against.db'
 
 configure do
   Compass.add_project_configuration(File.join(Sinatra::Application.root, 'config', 'compass.rb'))
