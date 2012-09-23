@@ -1,7 +1,7 @@
 .grid
   - @politicians.each do |politician|
     .item
-      .frame
+      %a.frame{href: "#{politician.aph}"}
         %span.ribbon No
         %img{src: "/images/the98/#{politician.pid}.jpg", width: "130"}
       %h2= politician.title

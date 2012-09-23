@@ -13,6 +13,8 @@ $grid-width                 : ($grid-columns * $grid-column-width) + (($grid-col
 $grid-content-width         : (($grid-columns - 2) * $grid-column-width) + (($grid-columns - 3) * $grid-gutter-width)
 $grid-divider-width         : (($grid-columns - 4) * $grid-column-width) + (($grid-columns - 5) * $grid-gutter-width)
 
+$default-transition-duration : 0.3s
+
 @import 'mixins'
 @import 'normalize'
 @import 'typography'
@@ -36,15 +38,24 @@ h1
       overflow: hidden
       border: 1px solid $color-break
       position: relative
+      display: block
+      +transition()
+      &:hover
+        background: $color-highlight
+        border: 1px solid $color-highlight
+        +box-shadow(0 0 20px 0 rgba($color-shadow, 0.2))
+        .ribbon
+          border-color: $color-highlight
       .ribbon
+        +transition
         position: absolute
-        top: 5px
-        right: -17px
+        top: 7px
+        right: -18px
         display: inline-block
         text-align: center
         text-transform: uppercase
         background: #d93131
-        padding: 2px 20px 1px
+        padding: 2px 25px 1px
         +rotate(45deg)
         +box-shadow(0 0 10px 0, rgba($color-shadow, 0.2))
         border: 1px solid $color-border
