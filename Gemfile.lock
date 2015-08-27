@@ -22,6 +22,7 @@ GEM
     fssm (0.2.9)
     haml (3.1.7)
     i18n (0.6.1)
+    iconv (1.0.4)
     maruku (0.6.0)
       syntax (>= 1.0.0)
     multi_json (1.3.6)
@@ -48,6 +49,7 @@ PLATFORMS
 DEPENDENCIES
   compass
   haml
+  iconv (~> 1.0.3)
   maruku
   pg
   sass
