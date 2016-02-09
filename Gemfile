@@ -2,7 +2,7 @@ ruby "2.2.4"
 source 'https://rubygems.org'
 
 group :development, :test do
-  gem 'sqlite3'
+  gem 'sqlite3', '1.3.11'
 end
 
 group :production do
